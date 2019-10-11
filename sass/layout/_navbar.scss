@@ -21,7 +21,7 @@ header {
             pointer-events: none;
             height: calc( 20px + (40 - 20) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
             background-color: $red;
-            padding: 15px 15px;
+            padding: calc( 12px + (15 - 12) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
         }
     }
 
@@ -54,4 +54,50 @@ header {
             }
         }
     }
+
+    .menu {
+        display: none;
+    
+        #nav-toggler {
+          color: $dark-gray;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    header {
+        width: 95vw;
+        padding: 0 2.5vw;
+
+        div {
+            object {
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header {
+        width: 100vw;
+        padding: 0;
+
+        .nav {
+            display: none;
+        }
+        .menu {
+            display: flex;
+            justify-content: flex-end;
+            flex-grow: 1;
+            flex-shrink: 1;
+
+            i {
+                padding: 10px;
+                margin-right: 5px;
+            }
+        }
+        
+    }
+
+
 }
