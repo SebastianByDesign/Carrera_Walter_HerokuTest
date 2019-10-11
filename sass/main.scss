@@ -1,0 +1,55 @@
+//Importing variables
+@import "_vars";
+
+//Importing layout
+@import "layout/navbar";
+
+//Importing sections
+@import "sections/hero";
+
+.hidden {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100vw;
+}
+
+section {
+    min-height: 80vh;
+}
+
+h1, h2, h3, p, a {
+    font-family: $lato;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 19px;
+    font-weight: 400;
+}
+
+p { 
+    font-size: 14px;
+    font-weight: 300;
+}
+
+a {
+    font-size: 14px;
+    font-weight: 300;
+}

@@ -1,0 +1,18 @@
+.hero {
+    background: url(../images/hero-large.jpg) no-repeat center center scroll;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+
+    div {
+        
+        padding: 40px 80px;
+        h3 {
+            color: $dark-gray;
+        }
+        h1 {
+            line-height: .2;
+            color: $red;
+        }
+    }
+}
