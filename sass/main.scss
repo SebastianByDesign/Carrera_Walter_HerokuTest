@@ -1,0 +1,85 @@
+//Importing variables
+@import "_vars";
+
+//Importing layout
+@import "layout/navbar";
+
+//Importing sections
+@import "sections/hero";
+@import "sections/product";
+@import "sections/featured";
+
+//Importing components
+@import "components/sidebar";
+
+.hidden {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100vw;
+}
+
+h1, h2, h3, p, a {
+    font-family: $lato;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+h3 {
+    font-size: 19px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+p { 
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0;
+    margin-top: 5px;
+}
+
+a {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+//Media Queries
+@media screen and (min-width: #{$min-width}px) {
+
+    //Calculating the font size according to the width of the viewport. 
+    //Math formula courtesy of Geoff Graham. https://css-tricks.com/snippets/css/fluid-typography/
+    h1 {
+      font-size: calc( 32px + (46 - 32) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+    }
+    h2 {
+      font-size: calc( 24px + (38 - 24) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+    }
+    h3 {
+      font-size: calc( 19px + (33 - 19) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+    }
+    p {
+      font-size: calc( 14px + (20 - 14) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+    }
+  
+  }

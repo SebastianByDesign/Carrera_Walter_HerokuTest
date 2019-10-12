@@ -1,0 +1,108 @@
+header {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: fixed;
+    background-color: $see-through;
+    top: 0;
+    z-index: 10;
+    width: 80vw;
+    height: calc( 40px + (67 - 40) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+    padding: 0 10vw;
+    justify-content: flex-start;
+
+    div {
+        display: flex;
+        justify-content: flex-start;
+        flex-grow: 1;
+        flex-shrink: 1;
+
+        object {
+            pointer-events: none;
+            height: calc( 20px + (40 - 20) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+            background-color: $red;
+            padding: calc( 12px + (15 - 12) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+        }
+    }
+
+    .nav {
+        display: flex;
+        justify-content: flex-end;
+        flex-grow: 1;
+        flex-shrink: 1;
+
+        .nav-items {
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: inline;
+                padding: 0 1vw;
+                margin: 0;
+
+                a {
+                    text-decoration: none;
+                    color: $dark-gray;
+                    padding: 5px;
+
+                    &:hover {
+                        text-decoration: underline;
+                        font-weight: 400;
+                        color: $red;
+                    }
+
+                    &.active {
+                        font-weight: 400;
+                        color: $red;
+                    }
+                }
+            }
+        }
+    }
+
+    .menu {
+        display: none;
+    
+        #nav-toggler {
+          color: $dark-gray;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    header {
+        width: 95vw;
+        padding: 0 2.5vw;
+
+        div {
+            object {
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header {
+        width: 100vw;
+        padding: 0;
+
+        .nav {
+            display: none;
+        }
+        .menu {
+            display: flex;
+            justify-content: flex-end;
+            flex-grow: 1;
+            flex-shrink: 1;
+
+            i {
+                padding: 10px;
+                margin-right: 5px;
+            }
+        }
+        
+    }
+
+
+}
