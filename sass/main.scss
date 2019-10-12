@@ -7,6 +7,10 @@
 //Importing sections
 @import "sections/hero";
 @import "sections/product";
+@import "sections/featured";
+
+//Importing components
+@import "components/sidebar";
 
 .hidden {
     display: none;

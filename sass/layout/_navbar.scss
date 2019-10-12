@@ -50,6 +50,11 @@ header {
                         font-weight: 400;
                         color: $red;
                     }
+
+                    &.active {
+                        font-weight: 400;
+                        color: $red;
+                    }
                 }
             }
         }
